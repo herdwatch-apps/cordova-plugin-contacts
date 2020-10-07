@@ -170,8 +170,13 @@
         allowsEditing = [(NSNumber*)allowsEditingValue boolValue];
     }
     pickerController.allowsEditing = allowsEditing;
-
-    [self.viewController presentViewController:pickerController animated:YES completion:nil];
+    if([NSThread isMainThread]) {
+        [self.viewController presentViewController:pickerController animated:YES completion:nil];
+    }else {
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            [self.viewController presentViewController:pickerController animated:YES completion:nil];
+        });
+    }
 }
 
 - (void)pickContact:(CDVInvokedUrlCommand *)command
