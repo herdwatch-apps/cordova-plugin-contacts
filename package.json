@@ -1,10 +1,10 @@
 {
-  "name": "cordova-plugin-contacts",
-  "version": "3.0.2-dev",
+  "name": "@herdwatch/cordova-plugin-contacts",
+  "version": "3.0.2",
   "description": "Cordova Contacts Plugin",
   "types": "./types/index.d.ts",
   "cordova": {
-    "id": "cordova-plugin-contacts",
+    "id": "@herdwatch/cordova-plugin-contacts",
     "platforms": [
       "android",
       "amazon-fireos",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/apache/cordova-plugin-contacts"
+    "url": "https://github.com/herdwatch-apps/cordova-plugin-contacts"
   },
   "bugs": {
     "url": "https://issues.apache.org/jira/browse/CB"
