@@ -2,6 +2,17 @@
 title: Contacts
 description: Manage the contacts on the device.
 ---
+
+## Why this fork exists
+
+Forked from [upstream](https://github.com/apache/cordova-plugin-contacts) because of a crash when presenting the iOS contact picker off the main thread after the user granted Contacts permission — fixed here and republished under our own npm scope.
+
+Published as [`@herdwatch/cordova-plugin-contacts`](https://www.npmjs.com/package/@herdwatch/cordova-plugin-contacts).
+
+Changes from upstream:
+- Fixed a crash in `src/ios/CDVContacts.m` where `presentViewController` was called off the main thread when Contacts permission was granted mid-flow; it now dispatches to the main thread when needed.
+- Republished under the `@herdwatch` npm scope and bumped the version from upstream's unreleased `3.0.2-dev` to a real `3.0.2`.
+
 <!---
 # license: Licensed to the Apache Software Foundation (ASF) under one
 #         or more contributor license agreements.  See the NOTICE file
