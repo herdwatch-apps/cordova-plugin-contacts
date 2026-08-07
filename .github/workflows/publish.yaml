@@ -23,7 +23,7 @@ jobs:
       - run: npm i
       - name: Release
         if: github.ref_name == 'master'
-        run: npm publish --access public
+        run: npm publish --access public --tag latest
       - name: Next
         if: github.ref_name == 'develop'
         run: npm publish --access public --tag next
