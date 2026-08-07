@@ -1,6 +1,6 @@
 {
   "name": "@herdwatch/cordova-plugin-contacts",
-  "version": "3.0.2",
+  "version": "3.0.2-fix.1",
   "description": "Cordova Contacts Plugin",
   "types": "./types/index.d.ts",
   "cordova": {
